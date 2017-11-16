@@ -2,27 +2,26 @@
   
   "apps": [
     {
-      "name": "Website", // 应用名称
-      "script": "app.js", // 应用入口
-      "env": {// 启动应用时的环境变量
+      "name": "Wx", 
+      "script": "app.js", 
+      "env": {
         "COMMON_VARIABLE": true
       },
-      "env_production": {// 生产环境启动应用时的环境变量
+      "env_production": {
         "NODE_ENV": "production"
       }
     }
   ],
   "deploy": {
-    "production": { // 任务名
-      "user": "root", // 生产sdf服务器账号
-      "host": ["101.132.116.19"], // 生产服务器地址
-    //  "port": "21", // 服务器 SSH 端口
-      "ref": "origin/master", // 分支
-      "repo": "git@gitee.com:leibo_code/wx_gzhao_ceshi.git", // 仓库地址
-      // git@gitee.com:leibo_code/wx_gzhao_ceshi.git
-      "path": "/www/wx/production", // 应用部署路径(绝对路径, 要确保该路径对 imooc_manager 可读可写可执行)
+    "production": { 
+      "user": "root", 
+      "host": ["101.132.116.19"], 
+    //  "port": "21", 
+      "ref": "origin/master", 
+      "repo": "git@gitee.com:leibo_code/wx_gzhao_ceshi.git", 
+      "path": "/www/wx/production", 
       "ssh_options": "StrictHostKeyChecking=no",
-      "env": { // 环境变量设置
+      "env": { 
         "NODE_ENV": "production"
       }
     }

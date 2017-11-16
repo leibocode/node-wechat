@@ -196,5 +196,5 @@ app.use(function* (next){
 })
 
 app.use(wechat(config.wechat))
-app.listen(3000);
+app.listen(3001);
 console.log("服务器启动的成功,端口号:3000");
