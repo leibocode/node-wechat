@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script> -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://weui.io/weui.css"> -->
+    <link href="https://cdn.bootcss.com/weui/1.1.2/style/weui.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+</head>
+<body>
+    <buttton id='btnPay'>点击支付</buttton>
+</body>
+<script>
+
+    $(function(){
+
+        function payCallback(res) {
+            if (res.err_msg === 'get_brand_wcpay_request:ok') {
+                showMsg('微信支付成功!');
+            } else if (res.err_msg === 'get_brand_wcpay_request:cancel') {
+                showMsg('用户取消支付!');
+            } else {
+                showMsg('支付失败!');
+            }
+            // //hhttp://wechatdemo.kangcer.com/Account/PayNotifyUrl
+            }
+        function createTimestamp(){
+            return parseInt(new Date().getTime() / 1000, 0) + ''
+       }
+        $('#btnPay').click(function(){
+                     alert('ok')
+                    // console.log(res)
+                    // console.log(res.data.appId)
+
+                    let wechatData ={
+                        appId:"wxdfcfda335b87446e",
+                        timeStamp:"1602664238",
+                        nonceStr: "9e9b0b1892b442a6aed76f3e2c2c5a0b",
+                        package: "prepay_id=wx14163036681555266b12c21b25685d0000",
+                        signType: 'MD5',
+                        paySign: "FC04D782FB9AC231898A930A613B41E5"
+                    }
+                    alert(wechatData.package)
+                    alert(wechatData.appId)
+                    console.log(wechatData.paySign)
+                    console.log(wechatData)
+                    WeixinJSBridge.invoke('getBrandWCPayRequest', wechatData, payCallback);
+            /*$.ajax({
+                url:'http://minapp.free.idcfengye.com/api/wechat/wechat-pay',
+                method:'POST',
+                contentType: "application/json",
+                dataType:"json",
+                data:JSON.stringify({
+                    "openid":"o69vZ6mwscVLoS0gFN_r5UdJQdUE",
+                    "total_fee":1,
+                    "wxActivityID":"dcb8d929-fa8f-471a-ad4a-ff4b8fdbf90b",
+                    "wxPatientID":"419E9D10-0FB5-44BF-8F21-825601578556"
+                }),
+                success:function (res) {
+                    alert('ok')
+                    console.log(res)
+                    console.log(res.data.appId)
+                    let wechatData ={
+                        appId:res.data.appId,
+                        timeStamp:res.data.timeStamp,
+                        nonceStr: res.data.nonceStr,
+                        package: res.data.package,
+                        signType: 'MD5',
+                        paySign: res.data.paySign
+                    }
+                    console.log(wechatData)
+                    WeixinJSBridge.invoke('getBrandWCPayRequest', wechatData, payCallback);
+                },
+                error:function (err) {
+                    alert('错误')
+                    alert(err)
+                    console.log(err); 
+                }
+            })*/
+           
+        })
+    })
+
+</script>
+</html>

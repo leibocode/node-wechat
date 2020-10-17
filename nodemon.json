@@ -1,0 +1,15 @@
+{
+    "restartable": "rs",
+    "ingore": [
+      ".git",
+      "node_modules/**/node_modules"
+    ],
+    "verbose": true,
+    "execMap": {
+      "js": "node --harmony"
+    },
+    "watch": [
+
+    ],
+    "ext": "js json"
+}

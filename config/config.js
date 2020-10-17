@@ -1,0 +1,36 @@
+export default {
+    "db": "mongodb://127.0.0.1:27017/wechat",
+    "minapp":{//小程序配置
+        "appid":"",
+        "secret":"",
+        "token":"",
+        "encodingAESKey":"", 
+        "sendMessageId":""
+    },
+    "secret":"wechat_min_token",
+    "wechat":{//正式配置
+        "appID":"",
+        "appSecret":"",
+        "token":"",
+        "SITE_ROOT_URL":""
+    },
+    "testWechat":{//微信测试号
+        "appID":"",
+        "appSecret":"",
+        "token":"",
+        "SITE_ROOT_URL":""
+    },
+    "api":"http://localhost:8182",//后端调用api
+    "pay":{//微信测试支付配置
+        "key":"",
+        "appid":"",
+        "mchId":"",
+        "notify_url":""
+    },
+    "wechatPay":{
+        "key":"",
+        "appid":"",
+        "mchId":"",
+        "notify_url":""
+    }
+}

@@ -1,15 +1,57 @@
 {
-  "name": "node-wx",
+  "name": "WxappApiServer",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "dependencies": {
-    "path": "^0.12.7"
-  },
-  "devDependencies": {},
+  "description": "api service",
+  "author": "Leibo<252517584@qq.com>",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon -w ./start.js --exec node ./start.js",
+    "satrt": "node ./start.js"
   },
-  "author": "leibo",
-  "license": "ISC"
+  "dependencies": {
+    "bcrypt": "^3.0.0",
+    "cheerio": "^1.0.0-rc.2",
+    "ejs": "^2.7.4",
+    "glob": "^7.1.2",
+    "jsonwebtoken": "^8.3.0",
+    "koa": "^2.5.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-cors": "0.0.16",
+    "koa-jwt": "^3.5.0",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "koa-session": "^5.8.2",
+    "koa-static": "^5.0.0",
+    "koa-swagger-decorator": "^1.7.0",
+    "koa-views": "^6.3.1",
+    "lodash": "^4.17.10",
+    "log4js": "^3.0.5",
+    "moment": "^2.29.1",
+    "mongoose": "^5.2.14",
+    "nodemon": "^1.18.3",
+    "ramda": "^0.25.0",
+    "raw-body": "^2.2.0",
+    "request-promise": "^4.2.2",
+    "sha1": "^1.1.1",
+    "tenpay": "^2.1.18",
+    "uuid": "^3.4.0",
+    "wechat-pay": "^0.3.2",
+    "xml2js": "^0.4.19",
+    "xss": "^1.0.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.0.2",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-module-alias": "^1.6.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.12",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0"
+  }
 }
