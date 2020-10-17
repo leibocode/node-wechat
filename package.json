@@ -9,7 +9,7 @@
     "satrt": "node ./start.js"
   },
   "dependencies": {
-    "bcrypt": "^3.0.0",
+    "bcrypt": "^5.0.0",
     "cheerio": "^1.0.0-rc.2",
     "ejs": "^2.7.4",
     "glob": "^7.1.2",
