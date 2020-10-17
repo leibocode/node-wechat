@@ -27,7 +27,7 @@
     "lodash": "^4.17.10",
     "log4js": "^3.0.5",
     "moment": "^2.29.1",
-    "mongoose": "^5.2.14",
+    "mongoose": "^5.7.5",
     "nodemon": "^1.18.3",
     "ramda": "^0.25.0",
     "raw-body": "^2.2.0",
